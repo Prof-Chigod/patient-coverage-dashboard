@@ -52,7 +52,7 @@ designed to ensure accuracy, usability, and meaningful insights:
 1. ## Import and Structure
 - I imported the dataset into Power BI and reviewed it in table format.
 ## Clean dataset
-[!Claim Clean Dataset](image/claim_clean_dataset.png)
+
 - To avoid misleading aggregations, I set key identifiers — Patient ID, Provider ID, Procedure
 Code, Claim ID, and Diagnosis Code to **“Don’t Summarize.”** This ensured that these
 categorical fields were treated as unique labels rather than numerical values.
