@@ -64,6 +64,10 @@ or lowest insurance payments, and which day showed unusual spikes or drops in cl
 - I did not create a separate Year column since the dataset is exclusively for 2024, making
 year-based comparisons unnecessary.
 ## Month
+<img width="1142" height="618" alt="image" src="https://github.com/user-attachments/assets/2a829c3a-70f0-4697-9487-d2efd2a00ca6" />
+## Day
+<img width="1203" height="624" alt="image" src="https://github.com/user-attachments/assets/25abb2a8-4dda-4f22-9da4-ee1ad48cc475" />
+
 
 
 
