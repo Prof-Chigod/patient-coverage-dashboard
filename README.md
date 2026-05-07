@@ -45,3 +45,14 @@ claim.
 closed.
 - **Outcome:** The final resolution of the claim, such as paid, partially paid, or denied.
 ---
+# Working with the Dataset
+The dataset came pre-cleaned, which allowed me to focus on structuring and preparing it for
+analysis rather than spending time on heavy preprocessing. My workflow in Power BI was
+designed to ensure accuracy, usability, and meaningful insights:
+1. ## Import and Structure
+- I imported the dataset into Power BI and reviewed it in table format.
+## Clean dataset
+[!Claim Clean Dataset](image/claim_clean_dataset.png)
+- To avoid misleading aggregations, I set key identifiers — Patient ID, Provider ID, Procedure
+Code, Claim ID, and Diagnosis Code to **“Don’t Summarize.”** This ensured that these
+categorical fields were treated as unique labels rather than numerical values.
