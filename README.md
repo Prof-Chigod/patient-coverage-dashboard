@@ -26,3 +26,22 @@ service is provided to the final resolution. Each field plays a role in telling 
 - **Claim ID:** A unique identifier that distinguishes each claim record.
 - **Provider ID:** Identifies the healthcare provider who submitted the claim.
 - **Patient ID:** An anonymized code representing the patient linked to the claim.
+- **Date of Service:** The exact date when the medical service was delivered.
+- **Billed Amount:** The total amount charged by the provider for the service.
+- **Procedure Code:** A standardized code (such as 99231) that specifies the medical
+procedure performed.
+- **Diagnosis Code:** A standardized code (such as A02.1) that indicates the patient’s
+diagnosis.
+- **Allowed Amount:** The portion of the billed amount approved by the insurer after
+adjustments.
+- **Paid Amount:** The actual payment made by the insurer to the provider.
+- **Insurance Type:** The type of insurance policy covering the patient (Medicare, Commercial,
+Self-pay, etc.).
+- **Claim Status:** The current state of the claim; whether it is paid, under review, or denied.
+- **Reason Code:** A code explaining why a claim was denied, paid, or partially paid.
+- **Follow-up Required:** A flag indicating whether additional action is needed to resolve the
+claim.
+- **AR Status:** The Accounts Receivable status, showing whether payment is pending or
+closed.
+- **Outcome:** The final resolution of the claim, such as paid, partially paid, or denied.
+---
