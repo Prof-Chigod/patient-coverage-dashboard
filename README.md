@@ -19,3 +19,10 @@ This project is unique because it treats claims data not as static records, but 
 of interactions between patients, providers, and insurers. It’s designed to surface insights that
 matter: where coverage breaks down, where costs escalate, and where follow-ups signal
 deeper structural issues
+---
+# Dataset Fields
+The dataset is designed to capture the complete journey of a medical claim, from the moment a
+service is provided to the final resolution. Each field plays a role in telling that story:
+- **Claim ID:** A unique identifier that distinguishes each claim record.
+- **Provider ID:** Identifies the healthcare provider who submitted the claim.
+- **Patient ID:** An anonymized code representing the patient linked to the claim.
