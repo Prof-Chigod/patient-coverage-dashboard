@@ -51,8 +51,26 @@ analysis rather than spending time on heavy preprocessing. My workflow in Power 
 designed to ensure accuracy, usability, and meaningful insights:
 1. ## Import and Structure
 - I imported the dataset into Power BI and reviewed it in table format.
-## Clean dataset
-
 - To avoid misleading aggregations, I set key identifiers — Patient ID, Provider ID, Procedure
 Code, Claim ID, and Diagnosis Code to **“Don’t Summarize.”** This ensured that these
 categorical fields were treated as unique labels rather than numerical values.
+## Clean dataset
+<img width="1259" height="531" alt="claim_clean_dataset" src="https://github.com/user-attachments/assets/85e12ac4-4702-45df-8aec-5f9b0ceb4e1a" />
+
+2. ## Date Formatting for Deeper Insights
+- I reformatted the Date of Service field by creating two new columns: Month and Day.
+- This separation allows for granular analysis, such as identifying which month had the highest
+or lowest insurance payments, and which day showed unusual spikes or drops in claim activity.
+- I did not create a separate Year column since the dataset is exclusively for 2024, making
+year-based comparisons unnecessary.
+## Month
+
+
+
+
+
+
+
+
+
+
