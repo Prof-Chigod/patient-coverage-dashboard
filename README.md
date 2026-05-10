@@ -65,15 +65,149 @@ or lowest insurance payments, and which day showed unusual spikes or drops in cl
 year-based comparisons unnecessary.
 ## Month
 <img width="1142" height="618" alt="image" src="https://github.com/user-attachments/assets/2a829c3a-70f0-4697-9487-d2efd2a00ca6" />
+
 ## Day
 <img width="1203" height="624" alt="image" src="https://github.com/user-attachments/assets/25abb2a8-4dda-4f22-9da4-ee1ad48cc475" />
 
+3. ## Analytical Purpose
+- These transformations were not just technical steps; they were intentional design choices to
+make the dataset more story-driven.
+- By focusing on identifiers and time-based breakdowns, the dataset now supports questions
+like:
+- Which providers consistently receive higher reimbursements?
+- Are certain diagnoses more likely to be denied or underpaid?
+- Do specific months show patterns of delayed claims or higher patient out-of-pocket
+costs?
+---
+# The Dashboard Story
+1. ## General Dashboard
+<img width="1059" height="595" alt="image" src="https://github.com/user-attachments/assets/969ce5c1-f6f7-4273-a57d-a4ae8b365066" />
+
+## Key Finding
+When the dataset was brought into Power BI, the first goal was to make the numbers speak.
+The dashboard began with filters for **Month**, **Day**, **Date of Service**, **Outcome**, and
+**Claim Status**, giving users the ability to slice the data from multiple angles.
+
+The financial cards immediately set the stage: providers billed a total of **297k**, insurers
+allowed **223k**, and ultimately paid **201k**. This simple trio of numbers told the story of the
+gap between what providers charge and what insurers agree to cover.
+
+Digging deeper, the **Reason Code analysis** uncovered a striking pattern. The most common
+issue patients faced was *“Authorization not obtained.”* This single administrative hurdle
+accounted for the highest patient count, showing how paperwork; not medicine, often
+determines outcomes.
+
+The **Provider distribution** added another layer to the story. Claims marked as *“Paid”* were
+most often linked to an AR Status of *“Partially Paid.”* Meanwhile, claims with the outcome
+*“Partially Paid”* had the least AR Status at *“Denied.”* This revealed a nuanced relationship
+between payment outcomes and receivables, suggesting that even *“paid”* claims often carried
+hidden complexities.
+
+Time-based filters brought seasonal variation into focus. **June** stood out with the highest
+number of Provider IDs, while **September** recorded the lowest. This raised questions about
+operational cycles or policy changes that might influence claim activity across the year.
+
+Finally, the **Insurance Type comparison** told a surprising story of parity. Both **Commercial**
+and **Medicaid** insurance types had the same total number of Claim IDs, and their financial
+metrics; billed, allowed, and paid amounts, matched exactly. This suggested that, at least in
+2024, these two insurance categories behaved in remarkably similar ways.
+<img width="1049" height="590" alt="image" src="https://github.com/user-attachments/assets/4f1d88a3-be85-44d8-bcef-6c6170219d7d" />
+
+## Key Finding
+On **Friday, May 10, 2024,** the dashboard revealed a very different picture compared to the
+general trends. This single day of service carried its own story.
+
+The **Reason Code analysis** showed that *“Pre-existing condition”* was the most frequent
+issue, with the highest number of Patient IDs. When grouped by **Diagnosis Code,** the same
+reason also carried the highest number of claims requiring follow-up marked as *“Yes.”* This
+highlighted how certain medical histories can trigger both administrative and clinical complexity.
+
+Looking at **Insurance Types,** both **Medicaid** and **Medicare** recorded the lowest
+number of Claim IDs on this date. Yet, in the *“Under Review”* Claim Status, the dashboard
+showed that Medicaid and Commercial insurance types had the highest **Allowed Amounts,**
+suggesting that while fewer claims were filed, the ones under review carried significant financial
+weight.
+
+Financially, **Medicaid** stood out across the board. It recorded the highest totals in **Billed
+Amount, Allowed Amount, and Paid Amount,** making it the dominant insurance type for this
+day’s claims activity.
+
+The **Provider Distribution** added another twist: outcomes of *“Partially Paid”* and *“Denied”*
+were tied when compared by **Outcome and AR Status.** This tie suggested that providers
+faced equal challenges in navigating partial payments and outright denials, underscoring the
+tension between reimbursement and rejection.
+
+3. ## Sunday, Denied Outcome Dashboard
+   <img width="1064" height="593" alt="image" src="https://github.com/user-attachments/assets/35e313db-f1e0-4321-ab98-cec9183ee186" />
+## Key Finding
+
+When the dashboard was filtered to **Sunday** and the outcome set to **Denied,** a very
+distinct pattern emerged.
+
+The financial cards told a surprising story: under this filter, **Commercial insurance** carried the
+highest totals across **Billed Amount, Allowed Amount, and Paid Amount,** while **Medicaid**
+consistently recorded the lowest. This contrast highlighted how denial outcomes don’t always
+align with lower financial activity; infact, the largest amounts were tied to denied claims under
+Commercial insurance.
+
+Looking closer at **Claim Status,** the *“Under Review”* category revealed that **Commercial**
+insurance led the way in Allowed Amounts, followed by **Self-Pay.** Commercial also had the
+highest number of Claim IDs under the denied outcome, reinforcing its dominance in this filtered
+view
+
+The **Diagnosis grouping** added another layer: the reason code *“Incorrect billing
+information”* peaked here, with both *“Yes Follow-up”* and *“No Follow-up”* counts reaching
+their highest under this same reason. This suggested that billing errors were a major driver of
+denied claims, regardless of whether follow-up was required.
+
+Finally, the **Provider Distribution** tied the story together. Under the denied outcome, the
+highest AR Status was also *“Denied,”* while the least was *“Partially Paid.”* This alignment
+showed that denial cascaded through the claims process, leaving little room for partial
+resolution.
+
+4. ## June, Claim Status “Paid” Dashboard
+<img width="1050" height="586" alt="image" src="https://github.com/user-attachments/assets/70231064-e6cc-405a-a0f6-8fd9a569f006" />
 
 
+## Key Finding
+June told a different story when the dashboard was filtered to show only claims with the status **“Paid.”**
 
+The **Reason Code analysis** revealed that *“Missing documentation”* was the most common
+issue by patient count, while *“Service not covered”* appeared the least. This suggested that
+even among paid claims, documentation gaps remained a recurring challenge.
 
+When grouped by **Diagnosis Code,** the reason code *“Pre-existing condition”* had the lowest
+number of claims requiring a *“Yes”* follow-up. In the *“No”* follow-up section, *“Pre-existing
+condition”* and *“Missing documentation”* tied at the bottom, showing that these issues were
+less likely to be resolved without further action.
 
+The **Provider Distribution** added another layer: the outcome *“Partially Paid”* combined with
+AR Status *“Partially Paid”* recorded the highest number of Provider IDs. This highlighted that
+even in a month dominated by paid claims, partial payments were still a significant reality for
+providers.
 
+Financially, **Self-Pay insurance type** stood out. It recorded the highest totals across **Billed
+Amount, Allowed Amount, and Paid Amount,** while **Medicare** consistently had the lowest;
+both in financial metrics and total Claim IDs. This contrast underscored the weight of
+out-of-pocket payments compared to government-backed coverage.
+
+Finally, under **Total Allowed Amount by Claim Status “Paid”,** **Commercial insurance**
+ranked second to the least. This finding suggested that while Commercial insurance was active
+in June, its contribution to allowed amounts lagged behind other types, raising questions about
+coverage generosity
+
+5. ## Outcome “Partially Paid” & Claim Status “Under Review” Dashboard
+<img width="1058" height="589" alt="image" src="https://github.com/user-attachments/assets/4aa5149b-058b-4970-bda2-9a5cd859e3ed" />
+
+## Key Finding
+
+When the dashboard was filtered to show claims with the outcome **“Partially Paid”** and status
+**“Under Review,”** the data revealed a layered story of administrative friction and financial
+imbalance.
+
+The **Reason Code analysis** showed that *“Lack of medical necessity”* had the lowest patient
+count overall, while *“Duplicate claim”* ranked as the third highest. This contrast highlighted
+how some denials stem from clinical justification, while others are purely administrative errors
 
 
 
